@@ -6,6 +6,15 @@ build-backend = "setuptools.build_meta"
 name = "pyper"
 version = "0.1.0"
 dependencies = ["pytest"]
+authors = [
+    {name="Samuel Zetumer", email="szetumer@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["pyper"]
+package-dir = {"" = "src"}
 
 [tool.pytest.ini_options] 
 minversion = "6.0"
