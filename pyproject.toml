@@ -3,14 +3,15 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyper"
-version = "0.1.0"
+name = "ice_pyper"
+version = "0.2.0"
 dependencies = ["pytest"]
 authors = [
     {name="Samuel Zetumer", email="szetumer@gmail.com"},
 ]
 readme = "README.md"
 requires-python = ">=3.10"
+license = {file = "LICENSE"}
 
 [tool.setuptools]
 packages = ["pyper"]

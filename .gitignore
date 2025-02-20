@@ -1,1 +1,6 @@
-./test 
+test 
+.pypirc
+.pytest_cache/
+dist/
+src/ice_pyper.egg-info/
+pyper_env/
