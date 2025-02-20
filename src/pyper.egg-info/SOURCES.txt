@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyper/__init__.py
+src/pyper/nodes.py
+src/pyper/on_dict.py
+src/pyper/on_obj.py
+src/pyper/on_seq.py
+src/pyper.egg-info/PKG-INFO
+src/pyper.egg-info/SOURCES.txt
+src/pyper.egg-info/dependency_links.txt
+src/pyper.egg-info/requires.txt
+src/pyper.egg-info/top_level.txt

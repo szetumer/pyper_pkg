@@ -1,0 +1,5 @@
+Metadata-Version: 2.2
+Name: pyper
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: pytest

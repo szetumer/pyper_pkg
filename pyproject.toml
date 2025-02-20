@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyper"
+version = "0.1.0"
+dependencies = ["pytest"]
+
+[tool.pytest.ini_options] 
+minversion = "6.0"
+# addopts = "-rX -n auto"
+testpaths = ["./tests"]
+pythonpath = ["./src/pyper"]
+
+[tool.mypy]
+mypy_path = "./mypy"
