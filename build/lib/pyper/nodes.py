@@ -37,7 +37,7 @@ class ON(Generic[T], N):
             return SN(tuple(self.data))
         return SN(self.data)
 
-    def is_type(self : ON[Any], t : type[T]) -> ON[T]:
+    def is_on_of(self : ON[Any], t) -> ON[Any]:
         if not isinstance(self.data, t):
             raise TypeError(f"item is not of type {t}")
         return self
@@ -123,14 +123,11 @@ class SN(Generic[T], N):
                 raise TypeError("SN is not SNSN!")
         return self
     
-    def is_type(self : SN[Any], t : type[T]) -> SN[T]:
-        if not isinstance(self.data, tuple):
-            raise TypeError("sn must be iterable, specifically a tuple")
-        for elet in self.data:
-            if not isinstance(elet, t):
-                raise TypeError("element is not of type")
+    def is_sn_of(self : SN[Any], t) -> SN[Any]:
+        for item in self.data:
+            if not isinstance(item, t):
+                raise TypeError(f"item is not of type {t}")
         return self
-
     
 class DN(UserDict[str, T], N):
     def __init__(self, data : Dict[str, T]):
@@ -195,12 +192,4 @@ class DN(UserDict[str, T], N):
         for value in self.data.values():
             if not isinstance(value, ON):
                 raise TypeError("a subexpression is not of type SN.")
-        return self
-    
-    def is_type(self : DN[Any], t : type[T]) -> DN[T]:
-        if not isinstance(self.data, dict):
-            raise TypeError("DN must wrap around a dictionary")
-        for key, val in self.data.items():
-            assert isinstance(key, str)
-            assert isinstance(val, t)
         return self

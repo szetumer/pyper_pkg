@@ -38,6 +38,7 @@ class do_func:
             return ON(f(data))
         return apply_f
 
+
 class do_flist:
     @staticmethod
     def does_obj_pass_all_flist_criteria(*args : Callable[[T], bool]) -> Callable[[Input[T]], bool]:
